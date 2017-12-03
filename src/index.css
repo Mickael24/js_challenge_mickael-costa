@@ -113,6 +113,9 @@ main {
   color: #ffffff;
   background-color: #444A59; }
 
+.button--wishlist-secondary {
+  border: 1px solid red; }
+
 .button--wishlist:hover {
   border: 1px solid #444A59; }
 
@@ -120,5 +123,4 @@ main {
   fill: #444A59; }
 
 .button--in-cart {
-  pointer-events: none;
   background-color: #d9d9d9; }

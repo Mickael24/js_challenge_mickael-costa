@@ -142,6 +142,10 @@ main {
     background-color: #444A59;
 }
 
+.button--wishlist-secondary {
+    border: 1px solid red;
+}
+
 .button--wishlist:hover {
     border: 1px solid #444A59;
 }
@@ -151,6 +155,5 @@ main {
 }
 
 .button--in-cart {
-    pointer-events: none;
     background-color: #d9d9d9;
 }
