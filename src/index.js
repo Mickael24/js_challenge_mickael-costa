@@ -7,9 +7,14 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import reducers from './reducers';
 
+import { addProducts } from './actions/products';
+import data from './data/products';
+
 const store = createStore(
   reducers
 );
+
+store.dispatch(addProducts(data));
 
 ReactDOM.render(<Provider store={store}>
     <App />
