@@ -8,13 +8,19 @@ class Product extends Component {
       title: props.element.title,
       subtitle: props.element.subtitle,
       price: props.element.price,
-      priceDiscounted: props.element.priceDiscounted || '',
+      priceDiscounted: props.element.priceDiscounted,
       image: props.element.image
     }
   }
 
+  renderClassPrice(priceDiscounted) {
+    if(priceDiscounted) {
+      return 'product__price--strike';
+    }
+    return 'product__price--normal';
+  }
+
   render() {
-    let useTag = '<use xmlns:xlink="http://www.w3.org/1999/xlin"/>';
     return (
       <li className="product-list__item">
         <article className="product" itemScope itemType="http://schema.org/Product">
@@ -32,7 +38,7 @@ class Product extends Component {
             <h1 className="product__title" itemProp="brand">{this.state.title}</h1>
             <p className="product__subtitle" itemProp="description">{this.state.subtitle}</p>
             <div className="product__price" itemScope itemType="http://schema.org/Offer">
-              <span className="product__price--strike">{this.state.price}</span><span className="product__price--discounted" itemProp="price">{this.state.priceDiscounted}</span>
+              <span className={this.renderClassPrice(this.state.priceDiscounted)}>{this.state.price}</span><span className="product__price--discounted" itemProp="price">{this.state.priceDiscounted}</span>
             </div>
             <button className="product__add-to-cart button button--primary">Add to Cart</button>
           </div>
