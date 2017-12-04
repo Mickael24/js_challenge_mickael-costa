@@ -1,10 +1,10 @@
 import Actions from '../actions/bag'
-import _ from 'lodash';
+import _ from 'lodash'
 
 const initialState = {
-  bag_price: 0,
-  bag_products: [],
-  whish_list_products: []
+  price: 0,
+  products: [],
+  whishList: []
 };
 
 export default function (state = initialState, action) {
@@ -13,27 +13,27 @@ export default function (state = initialState, action) {
     case Actions.ADD_TO_BAG:
       return {
         ...state,
-        bag_price: addPrice(state.bag_price, action.product),
-        bag_products: add(state.bag_products, action.product)
+        price: addPrice(state.price, action.product),
+        products: add(state.products, action.product)
       };
 
     case Actions.ADD_TO_WHISH_LIST:
       return {
         ...state,
-        whish_list_products: add(state.whish_list_products, action.product)
+        whishList: add(state.whishList, action.product)
       };
 
     case Actions.REMOVE_TO_BAG:
       return {
         ...state,
-        bag_price: removePrice(state.bag_price, action.product),
-        bag_products: remove(state.bag_products, action.product)
+        price: removePrice(state.price, action.product),
+        products: remove(state.products, action.product)
       };
 
     case Actions.REMOVE_WHISH_LIST:
       return {
         ...state,
-        whish_list_products: remove(state.whish_list_products, action.product)
+        whishList: remove(state.whishList, action.product)
       };
 
     default:
