@@ -157,3 +157,10 @@ main {
 .button--in-cart {
     background-color: #d9d9d9;
 }
+
+.product-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
