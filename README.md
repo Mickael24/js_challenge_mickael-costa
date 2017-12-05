@@ -22,4 +22,4 @@ Run `npm run test` to execute the unit tests.
 ## ALL Main Goals
 
 All objectives have been met. You can add and remove productos (click on the add button to add and again to remove), such as add / remove the whishlist with the star button.
-The page also works from all numbers.
+The pagination also works with all numbers.
